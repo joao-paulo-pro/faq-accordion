@@ -1,0 +1,117 @@
+*, 
+*:after,
+*:before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: "Work Sans", sans-serif;
+    font-size: 16px;
+    color: var(--cinza-principal);
+}
+
+:root {
+    --cor-de-fundo: rgb(249, 238, 255);
+    --branco: rgb(255, 255, 255);
+    --cinza-principal: rgb(124, 112, 126);
+    --cinza: rgb(250, 250, 250);
+    --preto-1: rgb(49, 19, 53); 
+    --preto-2: rgb(30, 18, 32);
+    --roxo: rgb(157, 58, 203);
+}
+
+
+body{
+    background-image: url(/faq-accordion-main/assets/images/background-pattern-desktop.svg);
+    background-color: var(--cor-de-fundo);
+    background-repeat: no-repeat;
+    background-size: 100%, 320px;
+    overflow-x: hidden;
+    display: flex;
+    padding: 50px 0 ;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    min-height: 100vh;
+    font-size: 100%;
+    list-style-type: none;
+}
+
+.container{
+    max-width: 600px;  
+    background-color: var(--branco);
+    margin: 0 25px;
+    border-radius: 10px;
+}
+
+.card_container{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 40px;
+}
+
+.card {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.img_star {
+    max-width: 35px;
+    max-height: 35px;
+}
+
+.card_title {
+    color: var(--preto-1);
+    font-weight: 700;
+    font-size: 45px;
+}
+
+.sections_faqs {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+
+.sections_faqs_card {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    padding: 25px 0;
+}
+
+.sections_faqs_card:not(:first-child) {
+    border-top: solid 1.9px var(--cinza);
+}
+
+.container_title_faq {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 35px;
+    cursor: pointer;
+}
+
+.title_faq {
+    color: var(--preto-2);
+}
+
+.title_faq:hover {
+    color: var(--roxo);
+}
+
+.response {
+    display: none;
+}
+
+.response.active {
+    display: block;
+}
+
+@media (max-width: 600px) {
+    body {
+        background-image: url(/faq-accordion-main/assets/images/background-pattern-mobile.svg);
+    }
+}
